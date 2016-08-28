@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="com.github.kurbatov:firmata4j:2.3.4" type="repository">
+    <properties maven-id="com.github.kurbatov:firmata4j:2.3.4" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/firmata4j-2.3.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jssc-2.8.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/slf4j-api-1.7.7.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/lib/firmata4j-2.3.4-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/firmata4j-2.3.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
