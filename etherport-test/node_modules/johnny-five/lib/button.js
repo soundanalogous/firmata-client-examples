@@ -48,6 +48,37 @@ var Controllers = {
       }
     }
   },
+
+  TINKERKIT: {
+    initialize: {
+      value: function(opts, dataHandler) {
+        var state = priv.get(this);
+        var value = 0;
+
+        this.io.pinMode(this.pin, this.io.MODES.ANALOG);
+
+        this.io.analogRead(this.pin, function(data) {
+          data = data > 512 ?  1 : 0;
+
+          // This condition simulates digitalRead's
+          // behavior of limiting calls to changes in
+          // pin value.
+          /* istanbul ignore else */
+          if (data !== value && data !== state.last) {
+            dataHandler(data);
+          }
+
+          value = data;
+        });
+      }
+    },
+    toBoolean: {
+      value: function(raw) {
+        return raw === this.downValue;
+      }
+    }
+  },
+
   EVS_EV3: {
     initialize: {
       value: function(opts, dataHandler) {
@@ -67,6 +98,7 @@ var Controllers = {
           // and digitalRead is continuous but only called for changes
           // in reading value, we need to suppress repeated calls to
           // dataHandler by limiting to only changed values.
+          /* istanbul ignore else */
           if (state.previous !== value) {
             dataHandler(value);
           }
@@ -100,6 +132,7 @@ var Controllers = {
           // dataHandler by limiting to only changed values.
           value = value < 300 ? 1 : 0;
 
+          /* istanbul ignore else */
           if (state.previous !== value) {
             dataHandler(value);
           }
@@ -252,7 +285,7 @@ function Button(opts) {
     }
   });
 
-
+  /* istanbul ignore else */
   if (typeof this.initialize === "function") {
     this.initialize(opts, function(data) {
       // Update the raw data value, which
@@ -260,6 +293,7 @@ function Button(opts) {
       raw = data;
 
       if (!this.isDown) {
+        /* istanbul ignore else */
         if (state.interval) {
           clearInterval(state.interval);
         }
@@ -270,6 +304,7 @@ function Button(opts) {
         trigger.call(this, "down");
 
         state.interval = setInterval(function() {
+          /* istanbul ignore else */
           if (this.isDown) {
             this.emit("hold");
           }
@@ -312,8 +347,6 @@ util.inherits(Button, events.EventEmitter);
 /**
  * Buttons()
  * new Buttons()
- *
- * Constructs an Array-like instance of all servos
  */
 
 function Buttons(numsOrObjects) {
@@ -341,6 +374,7 @@ Collection.installMethodForwarding(
 // Assign Buttons Collection class as static "method" of Button.
 Button.Collection = Buttons;
 
+/* istanbul ignore else */
 if (IS_TEST_MODE) {
   Button.purge = function() {
     priv.clear();
