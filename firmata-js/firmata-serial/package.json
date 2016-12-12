@@ -1,0 +1,11 @@
+{
+  "name": "firmata-js-serial-examples",
+  "version": "0.1.0",
+  "description": "firmata.js firmata serial feature examples",
+  "private": true,
+  "author": "soundanalogous@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "firmata": "^0.8.4"
+  }
+}

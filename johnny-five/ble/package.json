@@ -1,0 +1,12 @@
+{
+  "name": "johnny-five-ble-examples",
+  "version": "0.1.0",
+  "description": "johnny-five ble examples",
+  "private": true,
+  "author": "soundanalogous@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "ble-serial": "^0.4.1",
+    "johnny-five": "^0.9.17"
+  }
+}

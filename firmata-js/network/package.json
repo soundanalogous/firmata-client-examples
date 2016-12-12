@@ -1,0 +1,13 @@
+{
+  "name": "firmata-js-network-examples",
+  "version": "0.1.0",
+  "description": "firmata.js Ethernet and Wi-Fi examples",
+  "private": true,
+  "author": "soundanalogous@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "etherport": "^0.1.4",
+    "etherport-client": "^0.1.2",
+    "firmata": "^0.8.4"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "firmata-js-ble-examples",
+  "version": "0.1.0",
+  "description": "firmata.js ble examples",
+  "private": true,
+  "author": "soundanalogous@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "ble-serial": "^0.4.1",
+    "firmata": "^0.8.4"
+  }
+}
