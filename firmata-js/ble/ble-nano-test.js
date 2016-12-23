@@ -9,6 +9,20 @@
  * wiring:
  * button to pin D2
  * potentiometer to pin A0
+ *
+ * NOTE:
+ * In order for this example to work, you will need to patch the
+ * RedBearLab nRF51822-Arduino core library by following these instructions:
+ * 1. Install v1.0.7 of the RedBear nRF51822 Boards package using the Arduino
+ *    Boards Manager (Tools > Boards > Boards Manager...)
+ * 2. Clone https://github.com/soundanalogous/nRF51822-Arduino
+ * 3. From the cloned repo, copy the contents of the RBL_nRF51822 directory to
+ *    the /1.0.7/ directory in the /RedBear/hardware/nRF51822/ package that was
+ *    installed via the Arduino Board Manager. On OS X this is located in:
+ *    ~/Library/Arduino15/packages/
+ * 4. Copy StandardFirmataBLE and uncomment the 5 line #ifdef BLE_NANO block in
+ *    bleConfig.h (File > Examples > Firmata > StandardFirmataBLE)
+ * 5. Compile and upload your copy of StandardFirmataBLE to the BLE Nano
  */
 
 var BLESerialPort = require('ble-serial').SerialPort;
@@ -50,7 +64,7 @@ board.on("ready", function() {
 
   setInterval(function() {
     board.digitalWrite(blinkPin, (state ^= 1));
-  }, 2500);
+  }, 500);
 
   // board.analogRead(2, function(val) {
   //   //if (val !== lastVal) {
