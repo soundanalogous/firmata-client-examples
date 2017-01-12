@@ -57,10 +57,7 @@ board.on("ready", function() {
   );
 
   var state = 1;
-  var degrees = 10;
-  var incrementer = 10;
-  var blinkPin = 13;
-  var servoPin = 8;
+  var blinkPin = 8;
   var dBtnPin = 2;
   var aBtnPin = 16;
   var lastVal = 0;

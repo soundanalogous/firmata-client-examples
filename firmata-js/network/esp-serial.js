@@ -21,15 +21,16 @@ Board.requestPort(function(error, port) {
 
     var state = 1;
 
-    this.pinMode(2, this.MODES.OUTPUT);
+    this.pinMode(13, this.MODES.OUTPUT);
 
     setInterval(function() {
-      this.digitalWrite(2, (state ^= 1));
+      this.digitalWrite(13, (state ^= 1));
+      console.log("toggle led");
     }.bind(this), 500);
 
-    this.analogRead(0, function(value) {
-      console.log(value);
-    });
+    // this.analogRead(0, function(value) {
+    //   console.log(value);
+    // });
 
   });
 });

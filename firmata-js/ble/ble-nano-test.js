@@ -64,7 +64,7 @@ board.on("ready", function() {
 
   setInterval(function() {
     board.digitalWrite(blinkPin, (state ^= 1));
-  }, 500);
+  }, 2500);
 
   // board.analogRead(2, function(val) {
   //   //if (val !== lastVal) {
