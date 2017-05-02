@@ -7,7 +7,7 @@ var board = new five.Board({
 board.on("ready", function() {
   console.log("READY");
 
-  //board.samplingInterval(30);
+  board.samplingInterval(30);
 
   var led = new five.Led(2);
   led.blink(500);

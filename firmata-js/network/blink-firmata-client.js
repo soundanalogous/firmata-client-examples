@@ -4,7 +4,7 @@
 var Firmata = require("firmata").Board;
 var EtherPortClient = require("etherport-client").EtherPortClient;
 var board = new Firmata(new EtherPortClient({
-  host: "10.0.0.20",
+  host: "192.168.86.32",
   port: 3030
 }));
 

@@ -3,7 +3,7 @@ var five = require('johnny-five');
 
 var board = new five.Board({
   port: new EtherPortClient({
-    host: "10.0.0.20",
+    host: "192.168.86.36",
     port: 3030
   }),
   //timeout: 1e5,

@@ -8,6 +8,6 @@
   "dependencies": {
     "etherport": "^0.1.4",
     "etherport-client": "^0.1.2",
-    "johnny-five": "^0.9.17"
+    "johnny-five": "^0.10.10"
   }
 }
