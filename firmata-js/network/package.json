@@ -6,8 +6,8 @@
   "author": "soundanalogous@gmail.com",
   "license": "MIT",
   "dependencies": {
-    "etherport": "^0.1.4",
-    "etherport-client": "^0.1.2",
-    "firmata": "^0.8.4"
+    "etherport": "^0.2.0",
+    "etherport-client": "^0.1.3",
+    "firmata": "^0.16.0"
   }
 }
