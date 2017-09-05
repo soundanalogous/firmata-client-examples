@@ -7,6 +7,6 @@
   "license": "MIT",
   "dependencies": {
     "ble-serial": "^0.4.1",
-    "firmata": "^0.8.4"
+    "firmata": "^0.17.0"
   }
 }
