@@ -1,0 +1,11 @@
+{
+  "name": "firmata-js-accelStepper-examples",
+  "version": "0.1.0",
+  "description": "firmata.js accelStepper examples",
+  "private": true,
+  "author": "soundanalogous@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "firmata": "^0.17.0"
+  }
+}
